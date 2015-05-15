@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generated="20150515 14:42:33.922" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<suite source="/home/shnigi/robotframework/tests/tutorial.robot" id="s1" name="Tutorial">
+<test id="s1-t1" name="User must sign in to check out">
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>http://www.amazon.com</arg>
+<arg>ff</arg>
+</arguments>
+<msg timestamp="20150515 14:42:34.009" level="INFO">Opening browser 'ff' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150515 14:42:41.504" starttime="20150515 14:42:34.009"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150515 14:42:41.641" starttime="20150515 14:42:41.505"></status>
+</kw>
+<doc>This is some basic info</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20150515 14:42:41.641" critical="yes" starttime="20150515 14:42:34.008"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150515 14:42:41.642" starttime="20150515 14:42:33.922"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
+</total>
+<tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">Smoke</stat>
+</tag>
+<suite>
+<stat fail="0" pass="1" id="s1" name="Tutorial">Tutorial</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
