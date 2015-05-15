@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150515 14:42:33.922" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<robot generated="20150515 14:57:42.079" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
 <suite source="/home/shnigi/robotframework/tests/tutorial.robot" id="s1" name="Tutorial">
 <test id="s1-t1" name="User must sign in to check out">
 <kw type="kw" name="Selenium2Library.Open Browser">
@@ -8,25 +8,42 @@
 <arg>http://www.amazon.com</arg>
 <arg>ff</arg>
 </arguments>
-<msg timestamp="20150515 14:42:34.009" level="INFO">Opening browser 'ff' to base url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20150515 14:42:41.504" starttime="20150515 14:42:34.009"></status>
+<msg timestamp="20150515 14:57:42.169" level="INFO">Opening browser 'ff' to base url 'http://www.amazon.com'</msg>
+<status status="PASS" endtime="20150515 14:57:49.969" starttime="20150515 14:57:42.169"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>twotabsearchtextbox</arg>
+<arg>Laptop</arg>
+</arguments>
+<msg timestamp="20150515 14:57:49.971" level="INFO">Typing text 'Laptop' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20150515 14:57:50.607" starttime="20150515 14:57:49.970"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Go</arg>
+</arguments>
+<msg timestamp="20150515 14:57:50.608" level="INFO">Clicking button 'Go'.</msg>
+<status status="PASS" endtime="20150515 14:57:51.589" starttime="20150515 14:57:50.608"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Close Browser">
 <doc>Closes the current browser.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150515 14:42:41.641" starttime="20150515 14:42:41.505"></status>
+<status status="PASS" endtime="20150515 14:57:51.680" starttime="20150515 14:57:51.590"></status>
 </kw>
 <doc>This is some basic info</doc>
 <tags>
 <tag>Smoke</tag>
 </tags>
-<status status="PASS" endtime="20150515 14:42:41.641" critical="yes" starttime="20150515 14:42:34.008"></status>
+<status status="PASS" endtime="20150515 14:57:51.680" critical="yes" starttime="20150515 14:57:42.168"></status>
 </test>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150515 14:42:41.642" starttime="20150515 14:42:33.922"></status>
+<status status="PASS" endtime="20150515 14:57:51.681" starttime="20150515 14:57:42.079"></status>
 </suite>
 <statistics>
 <total>
