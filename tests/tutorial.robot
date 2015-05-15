@@ -2,12 +2,13 @@
 Library  Selenium2Library
 
 *** Variables ***
+${PAGE}  http://www.amazon.com
 
 *** Test Cases ***
-User must sign in to check out
-  [Documentation]  This is a comment
+User must be able to open amazon.com
+  [Documentation]  Type in Laptop and search
   [Tags]  Smoke
-  Open Browser  http://www.amazon.com  ff
+  Open Browser  ${PAGE}  ff
   Input Text  twotabsearchtextbox  Laptop
   Click Button  Go
   Close Browser
