@@ -4,18 +4,18 @@ Suite Setup  Go to homepage
 Suite Teardown  Close All Browsers
 
 *** Variables ***
-${HOMEPAGE}  http://www.google.fi
+${HOMEPAGE}  https://www.yahoo.com/
 ${BROWSER}  ff
 
 *** Test Cases ***
-Google "Houston, everything's cool." and find houston-inc
-    Google and check results  Houston, everything's cool  www.houston-inc.com
+Find houston inc from yahoo
+    Google and check results  houston-inc  www.houston-inc.com
 
 *** Keywords ***
 Google and check results
   [Arguments]  ${searchkey}  ${result}
-  Input Text  id=lst-ib  ${searchkey}
-  Click Button  value=Google-haku
+  Input Text  name=p  ${searchkey}
+  Click Button  id=search-submit
   Wait Until Page Contains  ${result}
 
 Go to homepage

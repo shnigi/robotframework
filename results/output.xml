@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150518 12:13:44.709" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
-<suite source="/home/shnigi/robotframework/tests" id="s1" name="Tests">
-<suite source="/home/shnigi/robotframework/tests/tutorial.robot" id="s1-s1" name="Tutorial">
-<test id="s1-s1-t1" name="User must be able to open amazon.com">
-<kw type="kw" name="Selenium2Library.Open Browser">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>${PAGE}</arg>
-<arg>ff</arg>
-</arguments>
-<msg timestamp="20150518 12:13:44.798" level="INFO">Opening browser 'ff' to base url 'http://www.amazon.com'</msg>
-<status status="PASS" endtime="20150518 12:13:53.212" starttime="20150518 12:13:44.798"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Input Text">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>twotabsearchtextbox</arg>
-<arg>Laptop</arg>
-</arguments>
-<msg timestamp="20150518 12:13:53.213" level="INFO">Typing text 'Laptop' into text field 'twotabsearchtextbox'</msg>
-<status status="PASS" endtime="20150518 12:13:53.864" starttime="20150518 12:13:53.213"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Click Button">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>Go</arg>
-</arguments>
-<msg timestamp="20150518 12:13:53.865" level="INFO">Clicking button 'Go'.</msg>
-<status status="PASS" endtime="20150518 12:13:54.811" starttime="20150518 12:13:53.865"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Close Browser">
-<doc>Closes the current browser.</doc>
-<arguments>
-</arguments>
-<status status="PASS" endtime="20150518 12:13:54.909" starttime="20150518 12:13:54.812"></status>
-</kw>
-<doc>Type in Laptop and search</doc>
-<tags>
-<tag>Smoke</tag>
-</tags>
-<status status="PASS" endtime="20150518 12:13:54.910" critical="yes" starttime="20150518 12:13:44.797"></status>
-</test>
-<doc></doc>
-<metadata>
-</metadata>
-<status status="PASS" endtime="20150518 12:13:54.910" starttime="20150518 12:13:44.737"></status>
-</suite>
-<suite source="/home/shnigi/robotframework/tests/tutorial2.robot" id="s1-s2" name="Tutorial2">
+<robot generated="20150522 14:13:58.880" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<suite source="/home/shnigi/robotframework/nikin/tests/tutorial2.robot" id="s1" name="Tutorial2">
 <kw type="setup" name="Go to homepage">
 <doc></doc>
 <arguments>
@@ -57,78 +11,69 @@
 <arg>${HOMEPAGE}</arg>
 <arg>${BROWSER}</arg>
 </arguments>
-<msg timestamp="20150518 12:13:54.916" level="INFO">Opening browser 'ff' to base url 'http://www.google.fi'</msg>
-<status status="PASS" endtime="20150518 12:13:59.396" starttime="20150518 12:13:54.916"></status>
+<msg timestamp="20150522 14:13:58.965" level="INFO">Opening browser 'ff' to base url 'https://www.yahoo.com/'</msg>
+<status status="PASS" endtime="20150522 14:14:05.418" starttime="20150522 14:13:58.965"></status>
 </kw>
-<status status="PASS" endtime="20150518 12:13:59.397" starttime="20150518 12:13:54.916"></status>
+<status status="PASS" endtime="20150522 14:14:05.418" starttime="20150522 14:13:58.964"></status>
 </kw>
-<test id="s1-s2-t1" name="Google &quot;Houston, everything's cool.&quot; and find houston-inc">
+<test id="s1-t1" name="Find houston inc from yahoo">
 <kw type="kw" name="Google and check results">
 <doc></doc>
 <arguments>
-<arg>Houston, everything's cool</arg>
+<arg>houston-inc</arg>
 <arg>www.houston-inc.com</arg>
 </arguments>
 <kw type="kw" name="Selenium2Library.Input Text">
 <doc>Types the given `text` into text field identified by `locator`.</doc>
 <arguments>
-<arg>id=lst-ib</arg>
+<arg>name=p</arg>
 <arg>${searchkey}</arg>
 </arguments>
-<msg timestamp="20150518 12:13:59.399" level="INFO">Typing text 'Houston, everything's cool' into text field 'id=lst-ib'</msg>
-<status status="PASS" endtime="20150518 12:13:59.830" starttime="20150518 12:13:59.399"></status>
+<msg timestamp="20150522 14:14:05.420" level="INFO">Typing text 'houston-inc' into text field 'name=p'</msg>
+<status status="PASS" endtime="20150522 14:14:05.828" starttime="20150522 14:14:05.420"></status>
 </kw>
 <kw type="kw" name="Selenium2Library.Click Button">
 <doc>Clicks a button identified by `locator`.</doc>
 <arguments>
-<arg>id=btnK</arg>
+<arg>id=search-submit</arg>
 </arguments>
-<msg timestamp="20150518 12:13:59.830" level="INFO">Clicking button 'id=btnK'.</msg>
-<kw type="kw" name="Selenium2Library.Capture Page Screenshot">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20150522 14:14:05.829" level="INFO">Clicking button 'id=search-submit'.</msg>
+<status status="PASS" endtime="20150522 14:14:08.119" starttime="20150522 14:14:05.828"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Wait Until Page Contains">
+<doc>Waits until `text` appears on current page.</doc>
 <arguments>
+<arg>${result}</arg>
 </arguments>
-<msg timestamp="20150518 12:14:00.094" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20150518 12:14:00.094" starttime="20150518 12:13:59.975"></status>
+<status status="PASS" endtime="20150522 14:14:09.225" starttime="20150522 14:14:08.120"></status>
 </kw>
-<msg timestamp="20150518 12:14:00.097" level="FAIL">ValueError: Element locator 'id=btnK' did not match any elements.</msg>
-<status status="FAIL" endtime="20150518 12:14:00.098" starttime="20150518 12:13:59.830"></status>
-</kw>
-<status status="FAIL" endtime="20150518 12:14:00.098" starttime="20150518 12:13:59.398"></status>
+<status status="PASS" endtime="20150522 14:14:09.225" starttime="20150522 14:14:05.419"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="FAIL" endtime="20150518 12:14:00.098" critical="yes" starttime="20150518 12:13:59.397">ValueError: Element locator 'id=btnK' did not match any elements.</status>
+<status status="PASS" endtime="20150522 14:14:09.225" critical="yes" starttime="20150522 14:14:05.418"></status>
 </test>
 <kw type="teardown" name="Selenium2Library.Close All Browsers">
 <doc>Closes all open browsers and resets the browser cache.</doc>
 <arguments>
 </arguments>
-<status status="PASS" endtime="20150518 12:14:00.188" starttime="20150518 12:14:00.099"></status>
+<status status="PASS" endtime="20150522 14:14:09.357" starttime="20150522 14:14:09.226"></status>
 </kw>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="FAIL" endtime="20150518 12:14:00.188" starttime="20150518 12:13:54.911"></status>
-</suite>
-<doc></doc>
-<metadata>
-</metadata>
-<status status="FAIL" endtime="20150518 12:14:00.189" starttime="20150518 12:13:44.710"></status>
+<status status="PASS" endtime="20150522 14:14:09.357" starttime="20150522 14:13:58.880"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="1">Critical Tests</stat>
-<stat fail="1" pass="1">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat info="" links="" doc="" combined="" pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat fail="1" pass="1" id="s1" name="Tests">Tests</stat>
-<stat fail="0" pass="1" id="s1-s1" name="Tutorial">Tests.Tutorial</stat>
-<stat fail="1" pass="0" id="s1-s2" name="Tutorial2">Tests.Tutorial2</stat>
+<stat fail="0" pass="1" id="s1" name="Tutorial2">Tutorial2</stat>
 </suite>
 </statistics>
 <errors>
