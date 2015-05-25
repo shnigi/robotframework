@@ -1,0 +1,16 @@
+<example>
+  <first id="1">text</first>
+  <second id="2">
+    <child/>
+  </second>
+  <third>
+    <child>more text</child>
+    <second id="child"/>
+    <child><grandchild/></child>
+  </third>
+  <html>
+    <p>
+      Text with <b>bold</b> and <i>italics</i>.
+    </p>
+  </html>
+</example>
