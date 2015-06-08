@@ -4,7 +4,7 @@ Documentation     A resource file with reusable keywords and variables.
 Library           Selenium2Library
 
 *** Variables ***
-${SERVER}         localhost/~shnigi/phpverkkokurssi/
+${SERVER}         amazon.com
 ${BROWSER}        Firefox
 ${DELAY}          0
 ${PAGE URL}      http://${SERVER}/
@@ -17,4 +17,4 @@ Open Browser To Page
     Page Should Be Open
 
 Page Should Be Open
-    Title Should Be    Nikin PHP autosovellus
+    Title Should Be    Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs & more
