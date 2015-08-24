@@ -1,152 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150608 10:16:46.973" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<robot generated="20150824 14:10:05.296" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
 <suite source="/home/shnigi/koodaukset/robotframework/nikin" id="s1" name="Nikin">
 <suite source="/home/shnigi/koodaukset/robotframework/nikin/tests" id="s1-s1" name="Tests">
-<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests/search.robot" id="s1-s1-s1" name="Search">
-<kw type="setup" name="resource.Open Browser To Page">
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests/testownlibrary.robot" id="s1-s1-s1" name="Testownlibrary">
+<test id="s1-s1-s1-t1" name="HelloWorld">
+<kw type="kw" name="HelloWorld.Hello World">
 <doc></doc>
 <arguments>
 </arguments>
-<kw type="kw" name="Selenium2Library.Open Browser">
-<doc>Opens a new browser instance to given URL.</doc>
-<arguments>
-<arg>${PAGE URL}</arg>
-<arg>${BROWSER}</arg>
-</arguments>
-<msg timestamp="20150608 10:16:47.072" level="INFO">Opening browser 'Firefox' to base url 'http://amazon.com/'</msg>
-<status status="PASS" endtime="20150608 10:16:54.172" starttime="20150608 10:16:47.072"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Maximize Browser Window">
-<doc>Maximizes current browser window.</doc>
-<arguments>
-</arguments>
-<status status="PASS" endtime="20150608 10:16:54.531" starttime="20150608 10:16:54.172"></status>
-</kw>
-<kw type="kw" name="Selenium2Library.Set Selenium Speed">
-<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
-<arguments>
-<arg>${DELAY}</arg>
-</arguments>
-<status status="PASS" endtime="20150608 10:16:54.533" starttime="20150608 10:16:54.531"></status>
-</kw>
-<kw type="kw" name="resource.Page Should Be Open">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Title Should Be">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</arg>
-</arguments>
-<msg timestamp="20150608 10:16:54.956" level="INFO">Page title is 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more'.</msg>
-<status status="PASS" endtime="20150608 10:16:54.956" starttime="20150608 10:16:54.534"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:16:54.956" starttime="20150608 10:16:54.533"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:16:54.956" starttime="20150608 10:16:47.071"></status>
-</kw>
-<test id="s1-s1-s1-t1" name="User must be able to open amazon.com and search laptop">
-<kw type="kw" name="resource.Given Page Should Be Open">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Title Should Be">
-<doc>Verifies that current page title equals `title`.</doc>
-<arguments>
-<arg>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</arg>
-</arguments>
-<msg timestamp="20150608 10:16:55.389" level="INFO">Page title is 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more'.</msg>
-<status status="PASS" endtime="20150608 10:16:55.389" starttime="20150608 10:16:54.958"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:16:55.390" starttime="20150608 10:16:54.958"></status>
-</kw>
-<kw type="kw" name="Then user types in laptop to searchbar">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="amazon.assert page user types in laptop to searchbar">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Input Text">
-<doc>Types the given `text` into text field identified by `locator`.</doc>
-<arguments>
-<arg>twotabsearchtextbox</arg>
-<arg>Laptop</arg>
-</arguments>
-<msg timestamp="20150608 10:16:55.395" level="INFO">Typing text 'Laptop' into text field 'twotabsearchtextbox'</msg>
-<status status="PASS" endtime="20150608 10:16:55.616" starttime="20150608 10:16:55.394"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:16:55.616" starttime="20150608 10:16:55.393"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:16:55.617" starttime="20150608 10:16:55.391"></status>
-</kw>
-<kw type="kw" name="And press search">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="amazon.assert page press search">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Click Button">
-<doc>Clicks a button identified by `locator`.</doc>
-<arguments>
-<arg>Go</arg>
-</arguments>
-<msg timestamp="20150608 10:16:55.621" level="INFO">Clicking button 'Go'.</msg>
-<status status="PASS" endtime="20150608 10:17:00.014" starttime="20150608 10:16:55.621"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:17:00.015" starttime="20150608 10:16:55.619"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:17:00.015" starttime="20150608 10:16:55.617"></status>
-</kw>
-<kw type="kw" name="When laptops appear and user can see them">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="amazon.assert page contains laptop">
-<doc></doc>
-<arguments>
-</arguments>
-<kw type="kw" name="Selenium2Library.Page Should Contain Link">
-<doc>Verifies link identified by `locator` is found from current page.</doc>
-<arguments>
-<arg>//*[@id="result_0"]/div/div[2]/div[1]/a</arg>
-</arguments>
-<msg timestamp="20150608 10:17:00.919" level="INFO">Current page contains link '//*[@id="result_0"]/div/div[2]/div[1]/a'.</msg>
-<status status="PASS" endtime="20150608 10:17:00.919" starttime="20150608 10:17:00.020"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:17:00.919" starttime="20150608 10:17:00.019"></status>
-</kw>
-<status status="PASS" endtime="20150608 10:17:00.920" starttime="20150608 10:17:00.016"></status>
+<msg timestamp="20150824 14:10:05.336" level="INFO">HELLO WORLD!</msg>
+<status status="PASS" endtime="20150824 14:10:05.336" starttime="20150824 14:10:05.335"></status>
 </kw>
 <doc></doc>
 <tags>
-<tag>Smoke</tag>
 </tags>
-<status status="PASS" endtime="20150608 10:17:00.920" critical="yes" starttime="20150608 10:16:54.957"></status>
+<status status="PASS" endtime="20150824 14:10:05.336" critical="yes" starttime="20150824 14:10:05.334"></status>
 </test>
-<kw type="teardown" name="Selenium2Library.Close Browser">
-<doc>Closes the current browser.</doc>
-<arguments>
-</arguments>
-<status status="PASS" endtime="20150608 10:17:00.970" starttime="20150608 10:17:00.922"></status>
-</kw>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150608 10:17:00.971" starttime="20150608 10:16:47.004"></status>
+<status status="PASS" endtime="20150824 14:10:05.337" starttime="20150824 14:10:05.328"></status>
 </suite>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150608 10:17:00.974" starttime="20150608 10:16:47.002"></status>
+<status status="PASS" endtime="20150824 14:10:05.340" starttime="20150824 14:10:05.326"></status>
 </suite>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150608 10:17:00.976" starttime="20150608 10:16:46.973"></status>
+<status status="PASS" endtime="20150824 14:10:05.341" starttime="20150824 14:10:05.297"></status>
 </suite>
 <statistics>
 <total>
@@ -154,12 +37,11 @@
 <stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
-<stat info="" links="" doc="" combined="" pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
 <stat fail="0" pass="1" id="s1" name="Nikin">Nikin</stat>
 <stat fail="0" pass="1" id="s1-s1" name="Tests">Nikin.Tests</stat>
-<stat fail="0" pass="1" id="s1-s1-s1" name="Search">Nikin.Tests.Search</stat>
+<stat fail="0" pass="1" id="s1-s1-s1" name="Testownlibrary">Nikin.Tests.Testownlibrary</stat>
 </suite>
 </statistics>
 <errors>

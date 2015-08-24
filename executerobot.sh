@@ -6,7 +6,7 @@ function runByTestName() {
 }
 
 function runByFile() {
-  pybot --exclude pending --noncritical notimplemented -d results $1
+  pybot --noncritical notimplemented -d results $1
 }
 
 function runAllTests() {

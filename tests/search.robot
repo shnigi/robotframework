@@ -9,6 +9,7 @@ Suite Teardown  Close browser
 *** Test Cases ***
 User must be able to open amazon.com and search laptop
   [Tags]  Smoke
+  [Documentation]  This testcase opens amazon.com and searches for laptop
   Given Page Should Be Open
   Then user types in laptop to searchbar
   And press search
