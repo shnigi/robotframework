@@ -1,47 +1,566 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generated="20150824 14:10:05.296" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
+<robot generated="20150918 11:26:48.483" generator="Robot 2.8.7 (Python 2.7.6 on linux2)">
 <suite source="/home/shnigi/koodaukset/robotframework/nikin" id="s1" name="Nikin">
-<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests" id="s1-s1" name="Tests">
-<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests/testownlibrary.robot" id="s1-s1-s1" name="Testownlibrary">
-<test id="s1-s1-s1-t1" name="HelloWorld">
-<kw type="kw" name="HelloWorld.Hello World">
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/templates" id="s1-s1" name="Templates">
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/templates/testcasetemplate.robot" id="s1-s1-s1" name="Testcasetemplate">
+<test id="s1-s1-s1-t1" name="Example test case using template">
+<kw type="kw" name="Test System">
 <doc></doc>
 <arguments>
+<arg>3</arg>
+<arg>4</arg>
+<arg>7</arg>
 </arguments>
-<msg timestamp="20150824 14:10:05.336" level="INFO">HELLO WORLD!</msg>
-<status status="PASS" endtime="20150824 14:10:05.336" starttime="20150824 14:10:05.335"></status>
+<kw type="kw" name="${result} = Do something complicated">
+<doc></doc>
+<arguments>
+<arg>${input_1}</arg>
+<arg>${input_2}</arg>
+</arguments>
+<kw type="kw" name="${result} = BuiltIn.Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${input_1}+${input_2}</arg>
+</arguments>
+<msg timestamp="20150918 11:26:48.522" level="INFO">${result} = 7</msg>
+<status status="PASS" endtime="20150918 11:26:48.522" starttime="20150918 11:26:48.521"></status>
+</kw>
+<msg timestamp="20150918 11:26:48.522" level="INFO">${result} = 7</msg>
+<status status="PASS" endtime="20150918 11:26:48.522" starttime="20150918 11:26:48.521"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be True">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result} == ${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 11:26:48.523" starttime="20150918 11:26:48.522"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:26:48.523" starttime="20150918 11:26:48.520"></status>
+</kw>
+<kw type="kw" name="Test System">
+<doc></doc>
+<arguments>
+<arg>45</arg>
+<arg>55</arg>
+<arg>100</arg>
+</arguments>
+<kw type="kw" name="${result} = Do something complicated">
+<doc></doc>
+<arguments>
+<arg>${input_1}</arg>
+<arg>${input_2}</arg>
+</arguments>
+<kw type="kw" name="${result} = BuiltIn.Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${input_1}+${input_2}</arg>
+</arguments>
+<msg timestamp="20150918 11:26:48.524" level="INFO">${result} = 100</msg>
+<status status="PASS" endtime="20150918 11:26:48.524" starttime="20150918 11:26:48.524"></status>
+</kw>
+<msg timestamp="20150918 11:26:48.525" level="INFO">${result} = 100</msg>
+<status status="PASS" endtime="20150918 11:26:48.525" starttime="20150918 11:26:48.523"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be True">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result} == ${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 11:26:48.525" starttime="20150918 11:26:48.525"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:26:48.525" starttime="20150918 11:26:48.523"></status>
+</kw>
+<kw type="kw" name="Test System">
+<doc></doc>
+<arguments>
+<arg>35</arg>
+<arg>5</arg>
+<arg>40</arg>
+</arguments>
+<kw type="kw" name="${result} = Do something complicated">
+<doc></doc>
+<arguments>
+<arg>${input_1}</arg>
+<arg>${input_2}</arg>
+</arguments>
+<kw type="kw" name="${result} = BuiltIn.Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${input_1}+${input_2}</arg>
+</arguments>
+<msg timestamp="20150918 11:26:48.527" level="INFO">${result} = 40</msg>
+<status status="PASS" endtime="20150918 11:26:48.527" starttime="20150918 11:26:48.527"></status>
+</kw>
+<msg timestamp="20150918 11:26:48.527" level="INFO">${result} = 40</msg>
+<status status="PASS" endtime="20150918 11:26:48.527" starttime="20150918 11:26:48.526"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be True">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result} == ${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 11:26:48.528" starttime="20150918 11:26:48.528"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:26:48.528" starttime="20150918 11:26:48.525"></status>
+</kw>
+<kw type="kw" name="Test System">
+<doc></doc>
+<arguments>
+<arg>5</arg>
+<arg>5</arg>
+<arg>10</arg>
+</arguments>
+<kw type="kw" name="${result} = Do something complicated">
+<doc></doc>
+<arguments>
+<arg>${input_1}</arg>
+<arg>${input_2}</arg>
+</arguments>
+<kw type="kw" name="${result} = BuiltIn.Evaluate">
+<doc>Evaluates the given expression in Python and returns the results.</doc>
+<arguments>
+<arg>${input_1}+${input_2}</arg>
+</arguments>
+<msg timestamp="20150918 11:26:48.530" level="INFO">${result} = 10</msg>
+<status status="PASS" endtime="20150918 11:26:48.530" starttime="20150918 11:26:48.529"></status>
+</kw>
+<msg timestamp="20150918 11:26:48.530" level="INFO">${result} = 10</msg>
+<status status="PASS" endtime="20150918 11:26:48.530" starttime="20150918 11:26:48.529"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be True">
+<doc>Fails if the given condition is not true.</doc>
+<arguments>
+<arg>${result} == ${expected}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 11:26:48.530" starttime="20150918 11:26:48.530"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:26:48.530" starttime="20150918 11:26:48.528"></status>
 </kw>
 <doc></doc>
 <tags>
 </tags>
-<status status="PASS" endtime="20150824 14:10:05.336" critical="yes" starttime="20150824 14:10:05.334"></status>
+<status status="PASS" endtime="20150918 11:26:48.531" critical="yes" starttime="20150918 11:26:48.520"></status>
 </test>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150824 14:10:05.337" starttime="20150824 14:10:05.328"></status>
+<status status="PASS" endtime="20150918 11:26:48.531" starttime="20150918 11:26:48.518"></status>
 </suite>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150824 14:10:05.340" starttime="20150824 14:10:05.326"></status>
+<status status="PASS" endtime="20150918 11:26:48.532" starttime="20150918 11:26:48.515"></status>
+</suite>
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests" id="s1-s2" name="Tests">
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests/search.robot" id="s1-s2-s1" name="Search">
+<kw type="setup" name="resource.Open Browser To Page">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Open Browser">
+<doc>Opens a new browser instance to given URL.</doc>
+<arguments>
+<arg>${PAGE URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20150918 11:26:48.601" level="INFO">Opening browser 'Firefox' to base url 'http://amazon.com/'</msg>
+<status status="PASS" endtime="20150918 11:27:42.209" starttime="20150918 11:26:48.601"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Maximize Browser Window">
+<doc>Maximizes current browser window.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150918 11:27:42.641" starttime="20150918 11:27:42.209"></status>
+</kw>
+<kw type="kw" name="Selenium2Library.Set Selenium Speed">
+<doc>Sets the delay in seconds that is waited after each Selenium command.</doc>
+<arguments>
+<arg>${DELAY}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 11:27:42.644" starttime="20150918 11:27:42.642"></status>
+</kw>
+<kw type="kw" name="resource.Page Should Be Open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</arg>
+</arguments>
+<msg timestamp="20150918 11:27:42.658" level="INFO">Page title is 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more'.</msg>
+<status status="PASS" endtime="20150918 11:27:42.658" starttime="20150918 11:27:42.645"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:42.659" starttime="20150918 11:27:42.644"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:42.659" starttime="20150918 11:26:48.601"></status>
+</kw>
+<test id="s1-s2-s1-t1" name="User must be able to open amazon.com and search laptop">
+<kw type="kw" name="resource.Given Page Should Be Open">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Title Should Be">
+<doc>Verifies that current page title equals `title`.</doc>
+<arguments>
+<arg>Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more</arg>
+</arguments>
+<msg timestamp="20150918 11:27:42.683" level="INFO">Page title is 'Amazon.com: Online Shopping for Electronics, Apparel, Computers, Books, DVDs &amp; more'.</msg>
+<status status="PASS" endtime="20150918 11:27:42.683" starttime="20150918 11:27:42.665"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:42.684" starttime="20150918 11:27:42.663"></status>
+</kw>
+<kw type="kw" name="Then user types in laptop to searchbar">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="amazon.assert page user types in laptop to searchbar">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Input Text">
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<arguments>
+<arg>twotabsearchtextbox</arg>
+<arg>Laptop</arg>
+</arguments>
+<msg timestamp="20150918 11:27:42.688" level="INFO">Typing text 'Laptop' into text field 'twotabsearchtextbox'</msg>
+<status status="PASS" endtime="20150918 11:27:42.912" starttime="20150918 11:27:42.687"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:42.912" starttime="20150918 11:27:42.686"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:42.912" starttime="20150918 11:27:42.685"></status>
+</kw>
+<kw type="kw" name="And press search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="amazon.assert page press search">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Click Button">
+<doc>Clicks a button identified by `locator`.</doc>
+<arguments>
+<arg>Go</arg>
+</arguments>
+<msg timestamp="20150918 11:27:42.917" level="INFO">Clicking button 'Go'.</msg>
+<status status="PASS" endtime="20150918 11:27:43.109" starttime="20150918 11:27:42.917"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:43.109" starttime="20150918 11:27:42.915"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:43.110" starttime="20150918 11:27:42.913"></status>
+</kw>
+<kw type="kw" name="When laptops appear and user can see them">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="amazon.assert page contains laptop">
+<doc></doc>
+<arguments>
+</arguments>
+<kw type="kw" name="Selenium2Library.Page Should Contain Link">
+<doc>Verifies link identified by `locator` is found from current page.</doc>
+<arguments>
+<arg>//*[@id="result_0"]/div/div[2]/div[1]/a</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.044" level="INFO">Current page contains link '//*[@id="result_0"]/div/div[2]/div[1]/a'.</msg>
+<status status="PASS" endtime="20150918 11:27:46.045" starttime="20150918 11:27:43.111"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:46.045" starttime="20150918 11:27:43.110"></status>
+</kw>
+<status status="PASS" endtime="20150918 11:27:46.045" starttime="20150918 11:27:43.110"></status>
+</kw>
+<doc>This testcase opens amazon.com and searches for laptop</doc>
+<tags>
+<tag>Smoke</tag>
+</tags>
+<status status="PASS" endtime="20150918 11:27:46.046" critical="yes" starttime="20150918 11:27:42.660"></status>
+</test>
+<kw type="teardown" name="Selenium2Library.Close Browser">
+<doc>Closes the current browser.</doc>
+<arguments>
+</arguments>
+<status status="PASS" endtime="20150918 11:27:46.128" starttime="20150918 11:27:46.047"></status>
+</kw>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 11:27:46.129" starttime="20150918 11:26:48.535"></status>
+</suite>
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/tests/testownlibrary.robot" id="s1-s2-s2" name="Testownlibrary">
+<test id="s1-s2-s2-t1" name="HelloWorld">
+<kw type="kw" name="HelloWorld.Hello World">
+<doc></doc>
+<arguments>
+</arguments>
+<msg timestamp="20150918 11:27:46.137" level="INFO">HELLO WORLD!</msg>
+<status status="PASS" endtime="20150918 11:27:46.137" starttime="20150918 11:27:46.137"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150918 11:27:46.138" critical="yes" starttime="20150918 11:27:46.136"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 11:27:46.138" starttime="20150918 11:27:46.130"></status>
 </suite>
 <doc></doc>
 <metadata>
 </metadata>
-<status status="PASS" endtime="20150824 14:10:05.341" starttime="20150824 14:10:05.297"></status>
+<status status="PASS" endtime="20150918 11:27:46.139" starttime="20150918 11:26:48.532"></status>
+</suite>
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/xml" id="s1-s3" name="Xml">
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/xml/xmltest.robot" id="s1-s3-s1" name="Xmltest">
+<test id="s1-s3-s1-t1" name="Parse-Xml-example1">
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${XmlFile}</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.173" level="INFO">${root} = &lt;Element 'TestCases' at 0x7f7c9ed9cde0&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.172" starttime="20150918 11:27:46.172"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${root.tag}</arg>
+<arg>TestCases</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.174" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.174" starttime="20150918 11:27:46.173"></status>
+</kw>
+<kw type="kw" name="${testcase1} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>TestCase[@id='1']</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.175" level="INFO">${testcase1} = Valid User Login</msg>
+<status status="PASS" endtime="20150918 11:27:46.175" starttime="20150918 11:27:46.174"></status>
+</kw>
+<kw type="kw" name="${testcase2} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>TestCase[@id='2']</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.176" level="INFO">${testcase2} = Invalid User Login</msg>
+<status status="PASS" endtime="20150918 11:27:46.176" starttime="20150918 11:27:46.176"></status>
+</kw>
+<kw type="kw" name="${testcase3} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>TestCase[@id='3']</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.177" level="INFO">${testcase3} = Admin User Login</msg>
+<status status="PASS" endtime="20150918 11:27:46.177" starttime="20150918 11:27:46.177"></status>
+</kw>
+<kw type="kw" name="${testcase4} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>TestCase[@id='4']</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.178" level="INFO">${testcase4} = Dashboard verification</msg>
+<status status="PASS" endtime="20150918 11:27:46.178" starttime="20150918 11:27:46.178"></status>
+</kw>
+<kw type="kw" name="${testcase5} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>TestCase[@id='5']</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.179" level="INFO">${testcase5} = User Settings Verification</msg>
+<status status="PASS" endtime="20150918 11:27:46.179" starttime="20150918 11:27:46.179"></status>
+</kw>
+<kw type="kw" name="${testcase6} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>TestCase[@id='6']</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.180" level="INFO">${testcase6} = Logout Verification</msg>
+<status status="PASS" endtime="20150918 11:27:46.180" starttime="20150918 11:27:46.180"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150918 11:27:46.181" critical="yes" starttime="20150918 11:27:46.171"></status>
+</test>
+<test id="s1-s3-s1-t2" name="Get-Child-Elements-Test">
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${XmlFile}</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.183" level="INFO">${root} = &lt;Element 'TestCases' at 0x7f7c9ed9ce10&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.183" starttime="20150918 11:27:46.182"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${root.tag}</arg>
+<arg>TestCases</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.184" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.184" starttime="20150918 11:27:46.183"></status>
+</kw>
+<kw type="kw" name="XML.Get Child Elements">
+<doc>Returns the child elements of the specified element as a list.</doc>
+<arguments>
+<arg>${root}</arg>
+</arguments>
+<status status="PASS" endtime="20150918 11:27:46.185" starttime="20150918 11:27:46.184"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Length Should Be">
+<doc>Verifies that the length of the given item is correct.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>6</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.186" level="INFO">Length is 6</msg>
+<status status="PASS" endtime="20150918 11:27:46.186" starttime="20150918 11:27:46.185"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150918 11:27:46.186" critical="yes" starttime="20150918 11:27:46.181"></status>
+</test>
+<test id="s1-s3-s1-t3" name="Get-Element-With-Attributes-Test">
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${XmlFile}</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.189" level="INFO">${root} = &lt;Element 'TestCases' at 0x7f7c9ed9cf60&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.189" starttime="20150918 11:27:46.188"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${root.tag}</arg>
+<arg>TestCases</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.190" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.190" starttime="20150918 11:27:46.189"></status>
+</kw>
+<kw type="kw" name="${TestCase2} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>*[@id="2"]</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.191" level="INFO">${TestCase2} = Invalid User Login</msg>
+<status status="PASS" endtime="20150918 11:27:46.191" starttime="20150918 11:27:46.190"></status>
+</kw>
+<kw type="kw" name="${TestCase5} = XML.Get Element Text">
+<doc>Returns all text of the element, possibly whitespace normalized.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>*[@id="5"]</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.192" level="INFO">${TestCase5} = User Settings Verification</msg>
+<status status="PASS" endtime="20150918 11:27:46.192" starttime="20150918 11:27:46.192"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150918 11:27:46.193" critical="yes" starttime="20150918 11:27:46.187"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 11:27:46.194" starttime="20150918 11:27:46.142"></status>
+</suite>
+<suite source="/home/shnigi/koodaukset/robotframework/nikin/xml/xmltutorial.robot" id="s1-s3-s2" name="Xmltutorial">
+<test id="s1-s3-s2-t1" name="Parse-Xml-Test">
+<kw type="kw" name="${root} = XML.Parse Xml">
+<doc>Parses the given XML file or string into an element structure.</doc>
+<arguments>
+<arg>${XmlFile}</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.202" level="INFO">${root} = &lt;Element 'example' at 0x7f7c9ed9cf00&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.202" starttime="20150918 11:27:46.201"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${root.tag}</arg>
+<arg>example</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.203" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.203" starttime="20150918 11:27:46.202"></status>
+</kw>
+<kw type="kw" name="${first} = XML.Get Element">
+<doc>Returns an element in the ``source`` matching the ``xpath``.</doc>
+<arguments>
+<arg>${root}</arg>
+<arg>first</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.204" level="INFO">${first} = &lt;Element 'first' at 0x7f7c9ed9ce70&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.204" starttime="20150918 11:27:46.203"></status>
+</kw>
+<kw type="kw" name="BuiltIn.Should Be Equal">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${first.text}</arg>
+<arg>text</arg>
+</arguments>
+<msg timestamp="20150918 11:27:46.205" level="INFO">Argument types are:
+&lt;type 'str'&gt;
+&lt;type 'unicode'&gt;</msg>
+<status status="PASS" endtime="20150918 11:27:46.205" starttime="20150918 11:27:46.204"></status>
+</kw>
+<doc></doc>
+<tags>
+</tags>
+<status status="PASS" endtime="20150918 11:27:46.206" critical="yes" starttime="20150918 11:27:46.200"></status>
+</test>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 11:27:46.206" starttime="20150918 11:27:46.195"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 11:27:46.207" starttime="20150918 11:27:46.140"></status>
+</suite>
+<doc></doc>
+<metadata>
+</metadata>
+<status status="PASS" endtime="20150918 11:27:46.209" starttime="20150918 11:26:48.485"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="0" pass="1">Critical Tests</stat>
-<stat fail="0" pass="1">All Tests</stat>
+<stat fail="0" pass="7">Critical Tests</stat>
+<stat fail="0" pass="7">All Tests</stat>
 </total>
 <tag>
+<stat info="" links="" doc="" combined="" pass="1" fail="0">Smoke</stat>
 </tag>
 <suite>
-<stat fail="0" pass="1" id="s1" name="Nikin">Nikin</stat>
-<stat fail="0" pass="1" id="s1-s1" name="Tests">Nikin.Tests</stat>
-<stat fail="0" pass="1" id="s1-s1-s1" name="Testownlibrary">Nikin.Tests.Testownlibrary</stat>
+<stat fail="0" pass="7" id="s1" name="Nikin">Nikin</stat>
+<stat fail="0" pass="1" id="s1-s1" name="Templates">Nikin.Templates</stat>
+<stat fail="0" pass="1" id="s1-s1-s1" name="Testcasetemplate">Nikin.Templates.Testcasetemplate</stat>
+<stat fail="0" pass="2" id="s1-s2" name="Tests">Nikin.Tests</stat>
+<stat fail="0" pass="1" id="s1-s2-s1" name="Search">Nikin.Tests.Search</stat>
+<stat fail="0" pass="1" id="s1-s2-s2" name="Testownlibrary">Nikin.Tests.Testownlibrary</stat>
+<stat fail="0" pass="4" id="s1-s3" name="Xml">Nikin.Xml</stat>
+<stat fail="0" pass="3" id="s1-s3-s1" name="Xmltest">Nikin.Xml.Xmltest</stat>
+<stat fail="0" pass="1" id="s1-s3-s2" name="Xmltutorial">Nikin.Xml.Xmltutorial</stat>
 </suite>
 </statistics>
 <errors>

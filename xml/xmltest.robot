@@ -2,10 +2,10 @@
 Library           XML
 
 *** Variables ***
-${XmlFile}        lal.xml
+${XmlFile}    ${CURDIR}/example1.xml
 
 *** Test Cases ***
-Parse-Xml-Test
+Parse-Xml-example1
     ${root}=    Parse XML    ${XmlFile}
     Should Be Equal    ${root.tag}    TestCases
     ${testcase1}=    Get Element Text    ${root}    TestCase[@id='1']
@@ -14,12 +14,6 @@ Parse-Xml-Test
     ${testcase4}=    Get Element Text    ${root}    TestCase[@id='4']
     ${testcase5}=    Get Element Text    ${root}    TestCase[@id='5']
     ${testcase6}=    Get Element Text    ${root}    TestCase[@id='6']
-
-#Add-Element-Test
-#    ${root}=    Parse XML    ${XmlFile}
-#    Should Be Equal    ${root.tag}    TestCases
-#    Add Element    ${root}    New Test Case
-#    ${testcase7}    Get Element Text    ${root}    TestCase[@id='7']
 
 Get-Child-Elements-Test
     ${root}=    Parse XML    ${XmlFile}

@@ -2,7 +2,7 @@
 Library           XML
 
 *** Variables ***
-${XmlFile}        lol.xml
+${XmlFile}    ${CURDIR}/example2.xml
 
 *** Test Cases ***
 Parse-Xml-Test
