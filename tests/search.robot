@@ -1,6 +1,6 @@
 *** Settings ***
-Resource  resources/resource.robot
-Resource  pages/amazon.robot
+Resource  ${EXECDIR}/resources/resource.robot
+Resource  ${EXECDIR}/pages/amazon.robot
 Suite Setup  Open Browser To Page
 Suite Teardown  Close browser
 

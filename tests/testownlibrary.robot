@@ -1,5 +1,5 @@
 *** Settings ***
-Library         customlibrary/HelloWorld.py
+Library         ${EXECDIR}/customlibrary/HelloWorld.py
 *** Variables ***
 *** Test Cases ***
 HelloWorld
